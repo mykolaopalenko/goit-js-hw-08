@@ -33,23 +33,23 @@ galeryBlock.innerHTML = galeryMarkup;
 function bigImage(event) {
    event.preventDefault()
 
-   if (event.target === event.currentTarget) {
-      return
-   };
+//    if (event.target === event.currentTarget) {
+//       return
+//    };
 
-   const originalImg = event.target.dataset.source;
+//    const originalImg = event.target.dataset.source;
 
-   const instance = basicLightbox.create(`<img src="${originalImg}" width="100%" height="100%">`)
+//    // const instance = basicLightbox.create(`<img src="${originalImg}" width="100%" height="100%">`)
 
 
 
-   instance.show()
+//    // instance.show()
 
-   document.addEventListener('keydown', (event) => {
-      if (event.code === 'Escape') {
-         instance.close()
-      }
-   })
+//    // document.addEventListener('keydown', (event) => {
+//    //    if (event.code === 'Escape') {
+//    //       instance.close()
+//    //    }
+//    // })
 
 };
 
