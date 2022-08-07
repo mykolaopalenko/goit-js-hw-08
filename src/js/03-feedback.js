@@ -13,7 +13,9 @@ const refs = {
 };
 
 refs.form.addEventListener('submit', onSubmitClick);
-refs.form.addEventListener('input', throttle(onFormInput, 1000));
+
+refs.form.addEventListener('input', throttle(onFormInput, 500));
+
 
 populateForm();
 
@@ -28,6 +30,8 @@ function onFormInput(evt) {
    formData[evt.target.name] = evt.target.value.trim();
    localStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
 }
+
+
 
 function populateForm() {
 

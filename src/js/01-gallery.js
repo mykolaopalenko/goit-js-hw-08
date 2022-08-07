@@ -1,9 +1,8 @@
 // Add imports above this line
 import { galleryItems } from './gallery-items';
 // Change code below this line
-
-import SimpleLightbox from 'simplelightbox/dist/simple-lightbox.esm';
-import 'simplelightbox/dist/simple-lightbox.min.css';
+import SimpleLightbox from "simplelightbox";
+import "simplelightbox/dist/simple-lightbox.min.css";
 
 console.log(galleryItems);
 
@@ -24,7 +23,7 @@ const galeryMarkup = galleryItems.map((item) => {
       />
     </a>
   </div>`
-}).join(' ');
+}).join('');
 
 galeryBlock.innerHTML = galeryMarkup;
 
@@ -32,35 +31,10 @@ galeryBlock.innerHTML = galeryMarkup;
 
 function bigImage(event) {
    event.preventDefault()
-
-//    if (event.target === event.currentTarget) {
-//       return
-//    };
-
-//    const originalImg = event.target.dataset.source;
-
-//    // const instance = basicLightbox.create(`<img src="${originalImg}" width="100%" height="100%">`)
-
-
-
-//    // instance.show()
-
-//    // document.addEventListener('keydown', (event) => {
-//    //    if (event.code === 'Escape') {
-//    //       instance.close()
-//    //    }
-//    // })
-
 };
-
-
-
 galeryBlock.addEventListener('click', bigImage);
 
 
 var lightbox = new SimpleLightbox('.gallery a', {
-   captions: true,
-   captionPosition: 'bottom',
-   captionsData: 'alt',
-   captionDelay: 0.25,
+   captionDelay: 250,
  });
