@@ -36,5 +36,8 @@ galeryBlock.addEventListener('click', bigImage);
 
 
 var lightbox = new SimpleLightbox('.gallery a', {
-   captionDelay: 250,
- });
+   captions: true,
+   captionPosition: 'bottom',
+   captionsData: 'alt',
+   captionDelay: 0.25,
+});
